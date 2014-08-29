@@ -1,4 +1,37 @@
-cf-ups-sample
-=============
+Pivotal CF Workshop - Spring MVC - MYSQL - UserProvided Service
+================================
 
-CF Application that can be bound to MySQL DB  UPS 
+Introduction
+------------
+
+This is the Spring MVC sample application for the Pivotal CF Workshop.
+It is intended to demonstrate some of the basic functionality of Pivotal
+CF (This spcific instance of the application has been modified to leverage a user provided service connection to a MYSQL instance):
+
+ * Pivotal CF target, login, and push
+ * Pivotal CF environment variables
+ * Pivotal CF service variables
+ * Scaling, router and load balancing
+ * Health manager and application restart
+ * RDBMS services via a UPS
+
+###NOTE - THE README DOCUMENTATION IS INCOMPLETE AT THIS TIME
+
+Building, Packaging, and Deploying
+--------------------------------
+
+###To get the source code and build the WAR file
+
+
+    git clone https://github.com/pivotal-cf-workshop/cf-workshop-spring-mvc
+
+    mvn clean package
+
+###To run the application
+
+The application is set to use an embedded H2 database in non-PaaS environments,
+to take advantage of Pivotal CF's auto-configuration for services.  No
+additional configuration is necessary when running locally or in Pivotal CF.
+
+In Pivotal CF, it is assumed that a MySQL Dev service will be used.
+
