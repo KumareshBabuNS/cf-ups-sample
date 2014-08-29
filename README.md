@@ -43,6 +43,10 @@ To leverage a user provided MySQL Service do the following:
 spring_profiles_active = mysql-ups
 
  * create and bind a user provided service pointing to a mysql database named cfw-ups-mysql
+
+
+cf create-user-provided service mysql-ups
+cf bind service 
  
 
 
