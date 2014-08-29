@@ -36,12 +36,12 @@ This application leverages Spring profiles to support both local and cloud deplo
     
  * set spring_profiles_active environment varaible to activate the mysql-ups profile
 
-```cf set env sample-ups-app spring_profiles_active mysql-ups```
+    ```cf set env sample-ups-app spring_profiles_active mysql-ups```
 
  * create and bind a user provided service pointing to a mysql database named cfw-ups-mysql
 
-```cf create-user-provided-service sample-ups-db -p '{"URL":"jdbc:mysql://databasehost:3306/database", "USER":"someuser", "PASSWD":"somepass"}'```
+    ```cf create-user-provided-service sample-ups-db -p '{"URL":"jdbc:mysql://databasehost:3306/database", "USER":"someuser", "PASSWD":"somepass"}'```
 
-```cf bind-service sample-ups-app sample-ups-db```
+    ```cf bind-service sample-ups-app sample-ups-db```
 
  * restart application to take advantage of the new database
