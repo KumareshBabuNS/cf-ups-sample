@@ -36,13 +36,13 @@ In the default and cloud profiles the application is set to use an embedded H2 d
 To take advantage of Pivotal CF's auto-configuration for services.  No
 additional configuration is necessary when running locally or in Pivotal CF.
 
-To leverage a user provided MySQL Service do the following
+To leverage a user provided MySQL Service do the following:
     
-    * set environment varaible to activate the mysql-ups profile
-    
-    spring_profiles_active = mysql-ups
-    
-    * create and bind a user provided service pointing to a mysql database named cfw-ups-mysql
+ * set environment varaible to activate the mysql-ups profile
+
+spring_profiles_active = mysql-ups
+
+ * create and bind a user provided service pointing to a mysql database named cfw-ups-mysql
  
 
 
