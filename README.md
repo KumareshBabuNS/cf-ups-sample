@@ -23,15 +23,26 @@ Building, Packaging, and Deploying
 ###To get the source code and build the WAR file
 
 
-    git clone https://github.com/pivotal-cf-workshop/cf-workshop-spring-mvc
+    git clone https://github.com/aripka-pivotal/cf-ups-sample
 
     mvn clean package
 
 ###To run the application
 
-The application is set to use an embedded H2 database in non-PaaS environments,
-to take advantage of Pivotal CF's auto-configuration for services.  No
+This application leverages Spring profiles.
+
+
+In the default and cloud profiles the application is set to use an embedded H2 database.
+To take advantage of Pivotal CF's auto-configuration for services.  No
 additional configuration is necessary when running locally or in Pivotal CF.
 
-In Pivotal CF, it is assumed that a MySQL Dev service will be used.
+To leverage a user provided MySQL Service do the following
+    
+    * set environment varaible to activate the mysql-ups profile
+    
+    spring_profiles_active = mysql-ups
+    
+    * create and bind a user provided service pointing to a mysql database named cfw-ups-mysql
+ 
+
 
