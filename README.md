@@ -1,19 +1,11 @@
-Pivotal CF Workshop - Spring MVC - MYSQL - UserProvided Service
+Pivotal Cloud Foundry -  User Provided Service Sample
 ================================
 
 Introduction
 ------------
 
-This is the Spring MVC sample application for the Pivotal CF Workshop.
-It is intended to demonstrate some of the basic functionality of Pivotal
-CF (This spcific instance of the application has been modified to leverage a user provided service connection to a MYSQL instance):
-
- * Pivotal CF target, login, and push
- * Pivotal CF environment variables
- * Pivotal CF service variables
- * Scaling, router and load balancing
- * Health manager and application restart
- * RDBMS services via a UPS
+This is the Spring MVC sample application that can connect to a MySQL user provided service.  
+This service is connected to by parsing the VCAP_SERVICES JSON and searching for a service name set as a property in the configuration of the "com.gopivotal.cf.workshop.cloudfoundry.MySQLUPSBasicDataSourceFactory" bean.  This application was modified from the Workshop application used for labs in the Pivotal CF Workshop.
 
 ###NOTE - THE README DOCUMENTATION IS INCOMPLETE AT THIS TIME
 

@@ -43,7 +43,7 @@
 		</property>
 	</bean>
 
-	<beans profile="cloud,default">
+	<beans profile="default, cloud">
 		<bean id="dataSource" class="org.h2.jdbcx.JdbcDataSource">
 			<property name="URL" value="jdbc:h2:~/test" />
 		</bean>
@@ -54,7 +54,7 @@
 		<bean id="MySQLUpsBasicDataSourceFactory"
 			class="com.gopivotal.cf.workshop.cloudfoundry.MySQLUPSBasicDataSourceFactory"
 			init-method="initalizeFromEnvironment">
-			<property name="upsName" value="cfw-ups-mysql"/>
+			<property name="upsName" value="sample-ups"/>
 		</bean>
 
 		<bean id="dataSource" factory-bean="MySQLUpsBasicDataSourceFactory" factory-method="getDataSource" />
